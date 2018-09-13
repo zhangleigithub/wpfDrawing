@@ -54,6 +54,26 @@ namespace Summer.WPF.Control
             }
         }
 
+        /// <summary>
+        /// Clone
+        /// </summary>
+        /// <returns>object</returns>
+        public override object Clone()
+        {
+            CompositeElement clone = new CompositeElement();
+            clone.Location = this.Location;
+            clone.Size = this.Size;
+            clone.ForeColor = this.ForeColor;
+            clone.BackColor = this.BackColor;
+
+            foreach (var item in this.childrens)
+            {
+                clone.AddElement(item.Clone() as AbstractElement);
+            }
+
+            return clone;
+        }
+
         #endregion
     }
 }

@@ -24,36 +24,27 @@ namespace wpfDrawing
         {
             InitializeComponent();
 
+            Dictionary<string, IElement> dicElement = new Dictionary<string, IElement>();
+
+            CompositeElement signalMachine = new CompositeElement();
+            signalMachine.Location = new Point(0, 0);
+            signalMachine.Size = new Size(100, 60);
+            signalMachine.ForeColor = Colors.Transparent;
+            signalMachine.BackColor = Colors.Transparent;
+            signalMachine.AddElement(new RoundElement() { Location = new Point(10, 10), Radius = 10, BackColor = Colors.Red, ForeColor = Colors.LightGray });
+            signalMachine.AddElement(new RoundElement() { Location = new Point(10, 30), Radius = 10, BackColor = Colors.Green, ForeColor = Colors.LightGray });
+            signalMachine.AddElement(new RoundElement() { Location = new Point(10, 50), Radius = 10, BackColor = Colors.Blue, ForeColor = Colors.LightGray });
+            signalMachine.AddElement(new LineElement() { BeginPoint = new Point(22, 0), EndPoint = new Point(22, 100), ForeColor = Colors.LightGray });
+            signalMachine.AddElement(new Summer.WPF.Control.TextElement() { Location = new Point(22, 4), ForeColor = Colors.Black, Text = "通过" });
+
+            dicElement["SignalMachine"] = signalMachine;
+            string str = Newtonsoft.Json.JsonConvert.SerializeObject(dicElement);
             for (int i = 0; i < 10; i++)
             {
-                CompositeElement e = new CompositeElement();
-                e.Location = new Point(i * 100, 200);
-                e.Size = new Size(100, 200);
-                e.ForeColor = Colors.Transparent;
-                e.BackColor = Colors.Transparent;
+                AbstractElement element = (dicElement["SignalMachine"] as AbstractElement).Clone() as AbstractElement;
+                element.Location = new Point(i * 100, 100);
 
-                e.AddElement(new RoundElement() { Location = new Point(10, 10), Radius = 10, BackColor = Colors.Red, ForeColor = Colors.LightGray });
-                e.AddElement(new RoundElement() { Location = new Point(10, 30), Radius = 10, BackColor = Colors.Green, ForeColor = Colors.LightGray });
-                e.AddElement(new RoundElement() { Location = new Point(10, 50), Radius = 10, BackColor = Colors.Blue, ForeColor = Colors.LightGray });
-                e.AddElement(new LineElement() { BeginPoint = new Point(22, 0), EndPoint = new Point(22, 100), ForeColor = Colors.LightGray });
-                e.AddElement(new Summer.WPF.Control.TextElement() { Location = new Point(22, 4), ForeColor = Colors.Black, Text = "通过" });
-
-                cc.AddChildElement(e);
-            }
-
-            for (int i = 2; i < 3; i++)
-            {
-                CompositeElement e = new CompositeElement();
-                e.Location = new Point(i * 200, i * 200);
-                e.Size = new Size(200, 200);
-                e.ForeColor = Colors.LightGray;
-                e.BackColor = Colors.White;
-
-                e.AddElement(new LineElement() { BeginPoint = new Point(30, 0), EndPoint = new Point(0, 30), ForeColor = Colors.LightGray });
-                e.AddElement(new LineElement() { BeginPoint = new Point(30, 0), EndPoint = new Point(60, 30), ForeColor = Colors.LightGray });
-                e.AddElement(new LineElement() { BeginPoint = new Point(0, 30), EndPoint = new Point(60, 30), ForeColor = Colors.LightGray });
-
-                cc.AddChildElement(e);
+                cc.AddChildElement(element);
             }
         }
     }

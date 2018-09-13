@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows;
 using System.Windows.Media;
@@ -10,7 +12,7 @@ namespace Summer.WPF.Control
     /// <summary>
     /// AbstractElement
     /// </summary>
-    public abstract class AbstractElement : IElement
+    public abstract class AbstractElement : IElement, ICloneable
     {
         #region 字段
 
@@ -108,6 +110,15 @@ namespace Summer.WPF.Control
         /// </summary>
         /// <param name="dc">dc</param>
         public abstract void OnRender(DrawingContext dc);
+
+        /// <summary>
+        /// Clone
+        /// </summary>
+        /// <returns>object</returns>
+        public virtual object Clone()
+        {
+            return this.MemberwiseClone();
+        }
 
         #endregion
     }
