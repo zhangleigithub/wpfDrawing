@@ -108,9 +108,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="XMLFile1.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Koala.jpg" />
     <Resource Include="Images\Penguins.jpg" />
   </ItemGroup>
