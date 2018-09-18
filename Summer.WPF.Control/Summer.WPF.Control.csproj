@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="AbstractElement.cs" />
     <Compile Include="CompositeElement.cs" />
+    <Compile Include="CurveElement.cs" />
     <Compile Include="CustomCanvas.cs" />
     <Compile Include="ElementFactory.cs" />
     <Compile Include="IElement.cs" />

@@ -78,4 +78,18 @@
       </object>
     </property>
   </object>
+  <object name="CurveElement1" type="Summer.WPF.Control.CompositeElement,Summer.WPF.Control">
+    <property name="Location" value="0,0"/>
+    <property name="Size" value="100,60"/>
+    <property name="ForeColor" value="#00FFFFFF"/>
+    <property name="BackColor" value="#00FFFFFF"/>
+    <property name="Children">
+      <object name="RoundElement1" type="Summer.WPF.Control.CurveElement,Summer.WPF.Control">
+        <property name="Location" value="5,5"/>
+        <property name="Points" value="10,5,20,0,30,5,40,0,50,5,60,0,70,5,80,0,90,5,100,0,110,5,120,0,130,5,140,0,150,5,160,0"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#FFFF0000"/>
+      </object>
+    </property>
+  </object>
 </objects>

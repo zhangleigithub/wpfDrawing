@@ -109,6 +109,19 @@ namespace Summer.WPF.Control
                     string[] strPoint = propertyValue.Split(',');
                     propertyInfo.SetValue(obj, new Point(double.Parse(strPoint[0]), double.Parse(strPoint[1])), null);
                 }
+                else if (propertyInfo.PropertyType == typeof(IList<System.Windows.Point>))
+                {
+                    IList<System.Windows.Point> points = new List<System.Windows.Point>();
+                    string[] strPoint = propertyValue.Split(',');
+
+                    for (int i = 0; i < strPoint.Length; i++)
+                    {
+                        points.Add(new Point(double.Parse(strPoint[i]), double.Parse(strPoint[i + 1])));
+                        i++;
+                    }
+
+                    propertyInfo.SetValue(obj, points, null);
+                }
                 else if (propertyInfo.PropertyType == typeof(Size))
                 {
                     string[] strPoint = propertyValue.Split(',');

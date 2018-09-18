@@ -31,6 +31,10 @@ namespace wpfDrawing
 
                 cc.AddChildElement(element);
             }
+
+            AbstractElement element1 = ElementFactory.GetInstance()["CurveElement1"] as AbstractElement;
+            element1.Location = new Point(10, 500);
+            cc.AddChildElement(element1);
         }
     }
 }
