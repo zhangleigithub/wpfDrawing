@@ -28,13 +28,13 @@ namespace Summer.WPF.Control
         /// </summary>
         public Point BeginPoint
         {
-            get
+            private get
             {
                 return Point.Add(this.Parent.Location, new Vector(this.Location.X, this.Location.Y));
             }
             set
             {
-                this.Location = value; 
+                this.Location = value;
             }
         }
 
@@ -43,7 +43,7 @@ namespace Summer.WPF.Control
         /// </summary>
         public Point EndPoint
         {
-            get
+            private get
             {
                 return Point.Add(this.Parent.Location, new Vector(this.endPoint.X, this.endPoint.Y));
             }

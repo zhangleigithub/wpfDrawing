@@ -9,7 +9,7 @@ namespace Summer.WPF.Control
     /// <summary>
     /// IElement
     /// </summary>
-    public interface IElement
+    public interface IElement : ICloneable
     {
         /// <summary>
         /// OnRender

@@ -11,12 +11,12 @@ namespace Summer.WPF.Control
     /// </summary>
     public class CompositeElement : AbstractElement, IElement
     {
-        #region 字段
+        #region 属性
 
         /// <summary>
-        /// childrens
+        /// Childrens
         /// </summary>
-        private IList<AbstractElement> childrens { get; set; }
+        public IList<AbstractElement> Children { get; set; }
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace Summer.WPF.Control
         /// </summary>
         public CompositeElement()
         {
-            this.childrens = new List<AbstractElement>();
+            this.Children = new List<AbstractElement>();
         }
 
         /// <summary>
@@ -36,8 +36,7 @@ namespace Summer.WPF.Control
         /// <param name="element">element</param>
         public void AddElement(AbstractElement element)
         {
-            element.Parent = this;
-            this.childrens.Add(element);
+            this.Children.Add(element);
         }
 
         /// <summary>
@@ -48,8 +47,9 @@ namespace Summer.WPF.Control
         {
             dc.DrawRectangle(this.GetBrush(this.BackColor), this.GetPen(this.ForeColor), this.Bounds);
 
-            foreach (var item in this.childrens)
+            foreach (var item in this.Children)
             {
+                item.Parent = this;
                 item.OnRender(dc);
             }
         }
@@ -66,7 +66,7 @@ namespace Summer.WPF.Control
             clone.ForeColor = this.ForeColor;
             clone.BackColor = this.BackColor;
 
-            foreach (var item in this.childrens)
+            foreach (var item in this.Children)
             {
                 clone.AddElement(item.Clone() as AbstractElement);
             }

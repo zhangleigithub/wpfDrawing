@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+  <object name="SignalMachine0" type="Summer.WPF.Control.CompositeElement,Summer.WPF.Control">
+    <property name="Location" value="0,0"/>
+    <property name="Size" value="100,60"/>
+    <property name="ForeColor" value="#00FFFFFF"/>
+    <property name="BackColor" value="#00FFFFFF"/>
+    <property name="Children">
+      <object name="RoundElement1" type="Summer.WPF.Control.RoundElement,Summer.WPF.Control">
+        <property name="Location" value="10,10"/>
+        <property name="Radius" value="10"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#FFFF0000"/>
+      </object>
+      <object name="RoundElement2" type="Summer.WPF.Control.RoundElement,Summer.WPF.Control">
+        <property name="Location" value="10,30"/>
+        <property name="Radius" value="10"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#FF008000"/>
+      </object>
+      <object name="RoundElement3" type="Summer.WPF.Control.RoundElement,Summer.WPF.Control">
+        <property name="Location" value="10,50"/>
+        <property name="Radius" value="10"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#FF0000FF"/>
+      </object>
+      <object name="LineElement" type="Summer.WPF.Control.LineElement,Summer.WPF.Control">
+        <property name="Location" value="22,0"/>
+        <property name="BeginPoint" value="22,0"/>
+        <property name="EndPoint" value="22,100"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#00000000"/>
+      </object>
+      <object name="TextElement" type="Summer.WPF.Control.TextElement,Summer.WPF.Control">
+        <property name="Text" value="通过"/>
+        <property name="Location" value="22,4"/>
+        <property name="ForeColor" value="#FF000000"/>
+        <property name="BackColor" value="#00000000"/>
+      </object>
+    </property>
+  </object>
+  <object name="SignalMachine1" type="Summer.WPF.Control.CompositeElement,Summer.WPF.Control">
+    <property name="Location" value="0,0"/>
+    <property name="Size" value="100,60"/>
+    <property name="ForeColor" value="#00FFFFFF"/>
+    <property name="BackColor" value="#00FFFFFF"/>
+    <property name="Children">
+      <object name="RoundElement1" type="Summer.WPF.Control.RoundElement,Summer.WPF.Control">
+        <property name="Location" value="10,10"/>
+        <property name="Radius" value="10"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#FFFF0000"/>
+      </object>
+      <object name="RoundElement2" type="Summer.WPF.Control.RoundElement,Summer.WPF.Control">
+        <property name="Location" value="10,30"/>
+        <property name="Radius" value="10"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#FF008000"/>
+      </object>
+      <object name="RoundElement3" type="Summer.WPF.Control.RoundElement,Summer.WPF.Control">
+        <property name="Location" value="10,50"/>
+        <property name="Radius" value="10"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#FF0000FF"/>
+      </object>
+      <object name="LineElement" type="Summer.WPF.Control.LineElement,Summer.WPF.Control">
+        <property name="Location" value="22,0"/>
+        <property name="BeginPoint" value="22,0"/>
+        <property name="EndPoint" value="22,100"/>
+        <property name="ForeColor" value="#FFD3D3D3"/>
+        <property name="BackColor" value="#00000000"/>
+      </object>
+      <object name="TextElement" type="Summer.WPF.Control.TextElement,Summer.WPF.Control">
+        <property name="Text" value="1"/>
+        <property name="Location" value="22,4"/>
+        <property name="ForeColor" value="#FF000000"/>
+        <property name="BackColor" value="#00000000"/>
+      </object>
+    </property>
+  </object>
+</objects>
