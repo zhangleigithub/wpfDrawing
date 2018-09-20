@@ -1,9 +1,9 @@
-﻿<Window xmlns:Control="clr-namespace:Summer.WPF.Control;assembly=Summer.WPF.Control"  x:Class="wpfDrawing.MainWindow"
+﻿<Window xmlns:Control="clr-namespace:Summer.WPF.Control;assembly=Summer.WPF.Control"  x:Class="wpfSeries.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:wpfDrawing"
+        xmlns:local="clr-namespace:wpfSeries"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>

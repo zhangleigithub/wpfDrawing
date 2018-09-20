@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpfDrawing", "wpfDrawing\wpfDrawing.csproj", "{9FB7F6B5-C553-49BE-AB70-2845D60999FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wpfSeries", "wpfDrawing\wpfSeries.csproj", "{9FB7F6B5-C553-49BE-AB70-2845D60999FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Summer.WPF.Control", "Summer.WPF.Control\Summer.WPF.Control.csproj", "{72DDA35A-03DE-479E-8383-2AEE2234A92F}"
 EndProject
